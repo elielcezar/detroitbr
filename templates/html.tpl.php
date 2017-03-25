@@ -24,6 +24,7 @@
 <!-- GOOGLE FONT-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,800,600|Scada:400,700' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:500,700,900" rel="stylesheet">
 <!-- /GOOGLE FONT-->
 
 

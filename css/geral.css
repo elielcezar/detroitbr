@@ -14,8 +14,9 @@ header {
   float: left; }
   header .logo {
     background: #000;
-    padding: 10px 5%;
-    float: left; }
+    padding: 24px 5%;
+    float: left;
+    height: 70px; }
   header li {
     width: auto;
     float: left;
@@ -67,19 +68,55 @@ header {
       width: 100%;
       opacity: .5;
       transition: all .3s; }
-    .front .destaque .container-destaque .titulo {
-      color: #fff;
+    .front .destaque .container-destaque:hover img {
+      opacity: 1; }
+  .front .destaque .view-destaque-a {
+    /*.titulo{
+    	font-size: 40px;
+    	font-family: 'Maven Pro', sans-serif; 
+    	font-weight: 700;
+    }*/ }
+    .front .destaque .view-destaque-a .conteudo-destaque {
       position: absolute;
       bottom: 40px;
       left: 40px;
       z-index: 10;
-      font-size: 24px;
-      font-family: 'Roboto Condensed', sans-serif; }
-    .front .destaque .container-destaque:hover img {
-      opacity: 1; }
-  .front .destaque .view-destaque-a .titulo {
-    font-size: 40px;
-    font-family: 'Roboto Condensed', sans-serif; }
+      color: #fff;
+      padding-right: 50px; }
+      .front .destaque .view-destaque-a .conteudo-destaque .categoria {
+        font-weight: bold;
+        text-transform: uppercase; }
+        .front .destaque .view-destaque-a .conteudo-destaque .categoria a {
+          color: #fff; }
+      .front .destaque .view-destaque-a .conteudo-destaque .titulo {
+        color: #fff;
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 25px;
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: 700;
+        letter-spacing: -1px;
+        text-transform: lowercase;
+        text-shadow: 2px 2px #000; }
+        .front .destaque .view-destaque-a .conteudo-destaque .titulo a {
+          color: #fff; }
+      .front .destaque .view-destaque-a .conteudo-destaque .chamada {
+        font-size: 21px;
+        font-weight: 600;
+        text-shadow: 2px 2px #000; }
+  .front .destaque .view-destaque-b .titulo,
+  .front .destaque .view-destaque-c .titulo,
+  .front .destaque .view-destaque-d .titulo {
+    color: #fff;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 10;
+    font-size: 24px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: lowercase; }
 .front .principal {
   float: left;
   width: 100%; }
@@ -108,7 +145,10 @@ header {
   .front .principal .view-noticias-home-a .views-field-title {
     font-size: 21px;
     margin: 10px 0;
-    font-family: 'Roboto Condensed', sans-serif; }
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-transform: lowercase; }
   .front .principal .view-noticias-home-b .views-row {
     float: left;
     width: 100%;
@@ -121,7 +161,10 @@ header {
       padding-right: 10px;
       padding-left: 10px; }
     .front .principal .view-noticias-home-b .views-row .titulo {
-      font-family: 'Roboto Condensed', sans-serif; }
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      letter-spacing: -1px;
+      text-transform: lowercase; }
   .front .principal .view-eventos-home {
     margin: 100px 0; }
   .front .principal .view-banner-home {
@@ -139,7 +182,10 @@ header {
   margin: 15px 0; }
   .page-noticias .principal .view-noticias-todas-16 .views-row .titulo {
     font-size: 24px;
-    font-family: 'Roboto Condensed', sans-serif; }
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: -1px; }
     .page-noticias .principal .view-noticias-todas-16 .views-row .titulo a {
       color: #222; }
   .page-noticias .principal .view-noticias-todas-16 .views-row .chamada {
@@ -163,15 +209,17 @@ header {
   margin-left: -35px;
   margin-right: -35px; }
   .node-type-article .principal .view-topo-noticia-16 h1 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 52px; }
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-size: 52px;
+    text-transform: lowercase; }
   .node-type-article .principal .view-topo-noticia-16 .views-field-field-chamada {
     padding: 10px 0;
     font-size: 28px;
     line-height: 32px;
     letter-spacing: -1px;
-    color: #999;
-    font-family: 'Roboto Condensed', sans-serif; }
+    color: #999; }
   .node-type-article .principal .view-topo-noticia-16 .views-field-nothing {
     border-top: 1px solid #999;
     padding-top: 15px;
@@ -198,7 +246,9 @@ header {
   font-size: 34px;
   line-height: 42px;
   letter-spacing: -1px;
-  font-family: 'Roboto Condensed', sans-serif; }
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px; }
 
 /*--- ARTISTAS ------------------------------------------*/
 .page-artistas .principal {
@@ -221,7 +271,8 @@ header {
     top: 0;
     color: #fff;
     text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
     padding: 40% 0;
     font-size: 24px;
     opacity: 0;
