@@ -1,0 +1,265 @@
+body {
+  font-family: 'Open Sans',serif; }
+
+a {
+  color: #222; }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 80%; } }
+header {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  float: left; }
+  header .logo {
+    background: #000;
+    padding: 10px 5%;
+    float: left; }
+  header li {
+    width: auto;
+    float: left;
+    display: inline-block;
+    text-align: center; }
+    header li a {
+      display: block;
+      padding: 25px !important;
+      color: #fff; }
+    header li a:hover {
+      background: #222; }
+
+/* paginacao */
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #222;
+  border-color: #222; }
+
+.pagination > li > a,
+.pagination > li > span {
+  color: #222; }
+
+/*--- HOME ------------------------------------------------*/
+.front .destaque {
+  float: left;
+  width: 100%;
+  margin-bottom: 80px;
+  background: #000; }
+  .front .destaque .col-sm-8,
+  .front .destaque .col-sm-4 {
+    padding: 0;
+    margin: 0; }
+  .front .destaque .container-destaque {
+    overflow: hidden;
+    position: relative; }
+    .front .destaque .container-destaque img {
+      width: 100%;
+      opacity: .5;
+      transition: all .3s; }
+    .front .destaque .container-destaque .titulo {
+      color: #fff;
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      z-index: 10;
+      font-size: 24px;
+      font-family: 'Roboto Condensed', sans-serif; }
+    .front .destaque .container-destaque:hover img {
+      opacity: 1; }
+  .front .destaque .view-destaque-a .titulo {
+    font-size: 40px;
+    font-family: 'Roboto Condensed', sans-serif; }
+.front .principal {
+  float: left;
+  width: 100%; }
+  .front .principal .nav-tabs {
+    border-bottom: 2px solid #222;
+    margin-bottom: 15px; }
+    .front .principal .nav-tabs h4 {
+      float: left;
+      background: #222;
+      color: #fff;
+      padding: 5px 15px;
+      margin: 0;
+      padding: 11px 20px; }
+    .front .principal .nav-tabs li {
+      float: right; }
+    .front .principal .nav-tabs li a {
+      padding: 6px 15px; }
+    .front .principal .nav-tabs li.active > a,
+    .front .principal .nav-tabs li.active > a:focus,
+    .front .principal .nav-tabs li.active > a:hover {
+      border: none;
+      border-radius: 0; }
+    .front .principal .nav-tabs li.active a {
+      color: #fff;
+      background: #222; }
+  .front .principal .view-noticias-home-a .views-field-title {
+    font-size: 21px;
+    margin: 10px 0;
+    font-family: 'Roboto Condensed', sans-serif; }
+  .front .principal .view-noticias-home-b .views-row {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px; }
+    .front .principal .view-noticias-home-b .views-row a {
+      font-weight: bold; }
+    .front .principal .view-noticias-home-b .views-row .field-content .col-sm-4,
+    .front .principal .view-noticias-home-b .views-row .field-content .col-sm-8 {
+      padding-right: 10px;
+      padding-left: 10px; }
+    .front .principal .view-noticias-home-b .views-row .titulo {
+      font-family: 'Roboto Condensed', sans-serif; }
+  .front .principal .view-eventos-home {
+    margin: 100px 0; }
+  .front .principal .view-banner-home {
+    margin-top: 100px; }
+    .front .principal .view-banner-home img {
+      margin: auto; }
+
+/*--- TODAS AS NOTICIAS --------------------------------*/
+.page-noticias header {
+  margin-bottom: 100px; }
+.page-noticias .principal .container {
+  max-width: 1000px; }
+.page-noticias .principal .view-noticias-todas-16 .views-row {
+  padding: 15px 0;
+  margin: 15px 0; }
+  .page-noticias .principal .view-noticias-todas-16 .views-row .titulo {
+    font-size: 24px;
+    font-family: 'Roboto Condensed', sans-serif; }
+    .page-noticias .principal .view-noticias-todas-16 .views-row .titulo a {
+      color: #222; }
+  .page-noticias .principal .view-noticias-todas-16 .views-row .chamada {
+    font-size: 18px;
+    color: #999; }
+
+/*--- PAGINA DE UMA NOTICIA ----------------------------*/
+.node-type-article .principal .view-capa-noticia {
+  float: left;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 500px; }
+  .node-type-article .principal .view-capa-noticia img {
+    display: none; }
+.node-type-article .principal .view-topo-noticia-16 {
+  margin-top: -100px;
+  background: #fff;
+  padding: 10px 35px;
+  margin-left: -35px;
+  margin-right: -35px; }
+  .node-type-article .principal .view-topo-noticia-16 h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 52px; }
+  .node-type-article .principal .view-topo-noticia-16 .views-field-field-chamada {
+    padding: 10px 0;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -1px;
+    color: #999;
+    font-family: 'Roboto Condensed', sans-serif; }
+  .node-type-article .principal .view-topo-noticia-16 .views-field-nothing {
+    border-top: 1px solid #999;
+    padding-top: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px; }
+  .node-type-article .principal .view-topo-noticia-16 .views-field-created,
+  .node-type-article .principal .view-topo-noticia-16 .views-field-changed {
+    font-family: 'Open Sans',serif;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    color: #525252; }
+  .node-type-article .principal .view-topo-noticia-16 .twitter {
+    float: left;
+    margin-right: 25px; }
+.node-type-article .principal .views-field-body p, .node-type-article .principal .views-field-body ul, .node-type-article .principal .views-field-body ol {
+  font-family: 'Open Sans',serif;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 24px;
+  color: #525252; }
+.node-type-article .principal .views-field-body h3, .node-type-article .principal .views-field-body .p3 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+/*--- ARTISTAS ------------------------------------------*/
+.page-artistas .principal {
+  float: left;
+  width: 100%; }
+  .page-artistas .principal h1 {
+    margin: 50px 0; }
+.page-artistas .view-artistas .views-row {
+  position: relative !important;
+  margin-bottom: 25px; }
+  .page-artistas .view-artistas .views-row .views-field-field-image {
+    overflow: hidden; }
+    .page-artistas .view-artistas .views-row .views-field-field-image img {
+      transition: .3s all; }
+  .page-artistas .view-artistas .views-row .views-field-title a {
+    display: block;
+    height: 100%;
+    width: 91%;
+    position: absolute;
+    top: 0;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 40% 0;
+    font-size: 24px;
+    opacity: 0;
+    transition: .3s all;
+    background-image: linear-gradient(to top, black, transparent); }
+.page-artistas .view-artistas .views-row:hover .views-field-title a {
+  opacity: 1; }
+.page-artistas .view-artistas .views-row:hover img {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2); }
+
+/*--- RODAPE ------------------------------------------*/
+footer {
+  float: left;
+  width: 100%;
+  margin-top: 150px;
+  border-top: 1px solid #ccc; }
+  footer .logo {
+    width: 25%;
+    text-align: center;
+    padding: 25px;
+    float: left;
+    border-right: 1px solid #ccc; }
+    footer .logo img {
+      margin: auto !important; }
+  footer .more-info {
+    float: left;
+    padding: 25px;
+    width: 75%; }
+    footer .more-info ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+    footer .more-info .block {
+      float: left;
+      width: 25%; }
+    footer .more-info .block.facebook {
+      width: 40%; }
+
+/*# sourceMappingURL=geral.css.map */
