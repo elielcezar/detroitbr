@@ -97,20 +97,29 @@
 
 	        <div class="col-sm-4">
 
-	        	<h4>Soundcloud</h4>
-
-	        	<iframe width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/147169091&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-				
 	        </div> 
 
 		</div>
 
 		<div class="row">
-			<?php print views_embed_view('eventos_home', 'default'); ?>
+			
+		</div>
+		<div class="soundcloud instagram">
+			<div class="row">
+				<div class="col-sm-8">
+					<iframe width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/101517582&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				</div>
+				<div class="col-sm-4">
+					<h4>instagram</h4>
+				</div>
+			</div>
 		</div>
 
-		<div class="row">
-			<?php print views_embed_view('banner_home', 'default'); ?>
+		<div class="banner-home">
+			<div class="container-banner">
+				<div class="tag">Publicidade</div>
+				<a href="http://www.br-oriente.com.br/"><img src="http://detroitbr.org/sites/all/themes/detroitbr2016/img/banner-home.jpg"></a>
+			</div>
 		</div>
 
 	</div><!-- container -->
