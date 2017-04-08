@@ -26,10 +26,12 @@ header{
 		float: left;
 		display: inline-block;		
 		text-align: center;
+		font-size: 18px;
 		a {
 			display: block;
-			padding: 25px !important;
+			padding: 24px  20px 20px 20px !important;
 			color: #fff;	
+			font-family: 'Maven Pro', sans-serif; 
 		}
 		a:hover {
 			background: #222;
@@ -100,8 +102,7 @@ header{
 					margin-bottom: 25px;
 					font-family: 'Maven Pro', sans-serif; 
 					font-weight: 700;
-					letter-spacing: -1px;
-					text-transform: lowercase;
+					letter-spacing: -1px;					
 					text-shadow: 2px 2px #000;
 					a{color: #fff;}
 				}
@@ -140,8 +141,6 @@ header{
 					font-family: 'Maven Pro', sans-serif; 
 					font-weight: 700;
 					letter-spacing: -1px;
-					text-transform: lowercase;
-
 					a{color: #fff;}
 				}
 			}
@@ -180,8 +179,7 @@ header{
 				margin: 10px 0;
 				font-family: 'Maven Pro', sans-serif; 
 				font-weight: 700;
-				letter-spacing: -1px;
-				text-transform: lowercase;
+				letter-spacing: -1px;				
 			}
 		}
 		.view-noticias-home-b{
@@ -199,8 +197,7 @@ header{
 				.titulo{
 					font-family: 'Maven Pro', sans-serif; 
 					font-weight: 700;
-					letter-spacing: -1px;
-					text-transform: lowercase;
+					letter-spacing: -1px;					
 				}
 			}
 		}
@@ -272,8 +269,7 @@ header{
 				.titulo{
 					font-size: 24px;
 					font-family: 'Maven Pro', sans-serif; 
-					font-weight: 700;
-					text-transform: lowercase;
+					font-weight: 700;					
 					letter-spacing: -1px;
 					a{color: $preto;}
 				}
@@ -308,9 +304,9 @@ header{
 				font-family: 'Maven Pro', sans-serif; 
 				font-weight: 700;
 				letter-spacing: -1px;
-				font-size: 52px;
-				text-transform: lowercase;
+				font-size: 52px;				
 			}
+			
 			.views-field-field-chamada{
 				padding: 10px 0;
 				font-size: 28px;
@@ -369,7 +365,6 @@ header{
 			width: 92%;
 			max-width: 92%;
 		}
-
 		.lista-artistas{		
 
 			.view-artistas{
@@ -377,35 +372,68 @@ header{
 					position: relative !important;
 					margin-bottom: 10px;
 					padding-right: 5px;
-					padding-left: 5px;
-
+					padding-left: 5px;					
 
 					.views-field-field-image{
 						overflow: hidden;
-						img{transition: .3s all;}
+						background: #000;
+						img{
+							transition: .3s all;
+							opacity: .8;
+						}
 					}
-					.views-field-title a{
-						display: block;
-						height: 100%;
-						width: 97%;
-						position: absolute;
-						top: 0;
-						color: #fff;
-						text-align: center;
-						font-family: 'Maven Pro', sans-serif; font-weight: 700;
-						padding: 40% 0;
-						font-size: 24px;
-						opacity: 0;
-						transition: .3s all;
-						background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+
+					.info-artista{
+						.nome a{
+						    display: block;
+						    position: absolute;
+						    top: 40%;
+						    width: 96%;
+						    color: #fff;
+						    text-align: center;
+						    font-size: 24px;
+						    font-family: 'Maven Pro', sans-serif; 
+						    font-weight: 700;
+						    transition: all .3s;						    
+						}
+						.links{
+							text-align: center;
+							width: 96%;
+							position: absolute;
+							bottom: 0;
+							opacity: 0;
+							transition: all .3s;
+							a{
+								display: inline-block;								
+								width: 25px;
+								height: 30px;
+								margin: 5px;
+								text-indent: -5000em;
+							}
+							a.facebook{background: transparent url(../img/icones-artista-w.png) 0 0 no-repeat;}
+							a.soundcloud{background: transparent url(../img/icones-artista-w.png) 0 -53px no-repeat;}
+							a.beatport{background: transparent url(../img/icones-artista-w.png) 0 -107px no-repeat;}
+							a.instagram{background: transparent url(../img/icones-artista-w.png) 0 -161px no-repeat;}
+							a.youtube{background: transparent url(../img/icones-artista-w.png) 0 -213px no-repeat;}
+							a.presskit{background: transparent url(../img/icones-artista-w.png) 1px -266px no-repeat;}
+						}
 					}
+					
 				}
-				.views-row:hover .views-field-title a{opacity: 1;}
-				.views-row:hover img{
-		            -moz-transform: scale(1.2);
-		            -webkit-transform: scale(1.2);
-		            transform: scale(1.2);
-		        }
+				//.views-row:hover .views-field-title a{opacity: 1;}
+				.views-row:hover{
+					.nome a{font-size: 32px;}
+					img{
+			            -moz-transform: scale(2);
+			            -webkit-transform: scale(2);
+			            transform: scale(2);
+			            opacity: 0.2;
+			        }
+			        .links{
+			        	bottom: 30%;
+						opacity: 1;
+			        }
+				} 
 			}
 
 		}
@@ -414,6 +442,98 @@ header{
 	}
 	
 }
+
+/*--- PAGINA DE UM ARTISTA ----------------------------*/
+.node-type-artista{
+	.principal{
+		.view-capa-artista{
+			float: left;
+			width: 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			background-color: #111;
+			height: 500px;
+			img{display: none;}
+		}
+		.view-topo-artista{
+			margin-top: -100px;
+			background: #fff;
+			padding: 10px 35px;
+			margin-left: -35px;
+			margin-right: -35px;			
+
+			h1{
+				font-family: 'Maven Pro', sans-serif; 
+				font-weight: 700;
+				letter-spacing: -1px;
+				font-size: 52px;
+				border-bottom: 2px solid #333;
+				padding-bottom: 15px;				
+			}			
+			
+		}
+		.views-field-body{
+			p, ul, ol {
+			    font-family: 'Open Sans',serif;
+			    font-size: 16px;
+			    line-height: 28px;
+			    margin-bottom: 24px;
+			    color: #525252;
+			}
+			h3, .p3{
+				font-weight: bold;
+				font-size: 34px;
+				line-height: 42px;
+				letter-spacing: -1px;
+				font-family: 'Maven Pro', sans-serif;
+				font-weight: 700;
+				letter-spacing: -1px;
+			}
+		}
+		.contatos{
+			margin: 40px 0 0 40px;			
+			h3{
+				font-weight: bold;
+				font-size: 34px;
+				line-height: 42px;
+				letter-spacing: -1px;
+				font-family: 'Maven Pro', sans-serif;
+				font-weight: 700;
+				letter-spacing: -1px;	
+				margin-bottom: 30px;
+			}
+
+			.view-contatos-artista{
+				width: 100%;
+				.views-field{
+					width: 100%;
+					margin-bottom: 15px;
+					a{						
+						font-size: 16px;
+						font-weight: bold;
+						border-bottom: 2px solid #333;
+						padding: 0 0 15px 45px;
+						display: inline-block;
+						width: 100%;
+
+						&:hover{color: #666;}
+					}
+				}
+			}
+			.views-field-field-facebook a{background: transparent url(../img/icones-artista.png) 0 0 no-repeat;}
+			.views-field-field-soundcloud a{background: transparent url(../img/icones-artista.png) 0 -53px no-repeat;}
+			.views-field-field-beatport a{background: transparent url(../img/icones-artista.png) 0 -107px no-repeat;}
+			.views-field-field-instagram a{background: transparent url(../img/icones-artista.png) 0 -161px no-repeat;}
+			.views-field-field-youtube a{background: transparent url(../img/icones-artista.png) 0 -213px no-repeat;}
+			.views-field-field-presskit a{background: transparent url(../img/icones-artista.png) 1px -266px no-repeat;}
+		}
+		
+	}
+	
+}
+
+
 /*--- RODAPE ------------------------------------------*/
 footer{
 	float: left;

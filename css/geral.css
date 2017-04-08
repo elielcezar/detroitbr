@@ -21,11 +21,13 @@ header {
     width: auto;
     float: left;
     display: inline-block;
-    text-align: center; }
+    text-align: center;
+    font-size: 18px; }
     header li a {
       display: block;
-      padding: 25px !important;
-      color: #fff; }
+      padding: 24px  20px 20px 20px !important;
+      color: #fff;
+      font-family: 'Maven Pro', sans-serif; }
     header li a:hover {
       background: #222; }
 
@@ -96,7 +98,6 @@ header {
         font-family: 'Maven Pro', sans-serif;
         font-weight: 700;
         letter-spacing: -1px;
-        text-transform: lowercase;
         text-shadow: 2px 2px #000; }
         .front .destaque .view-destaque-a .conteudo-destaque .titulo a {
           color: #fff; }
@@ -129,8 +130,7 @@ header {
       font-size: 24px;
       font-family: 'Maven Pro', sans-serif;
       font-weight: 700;
-      letter-spacing: -1px;
-      text-transform: lowercase; }
+      letter-spacing: -1px; }
       .front .destaque .view-destaque-b .conteudo-destaque .titulo a,
       .front .destaque .view-destaque-c .conteudo-destaque .titulo a,
       .front .destaque .view-destaque-d .conteudo-destaque .titulo a {
@@ -165,8 +165,7 @@ header {
     margin: 10px 0;
     font-family: 'Maven Pro', sans-serif;
     font-weight: 700;
-    letter-spacing: -1px;
-    text-transform: lowercase; }
+    letter-spacing: -1px; }
   .front .principal .view-noticias-home-b .views-row {
     float: left;
     width: 100%;
@@ -181,8 +180,7 @@ header {
     .front .principal .view-noticias-home-b .views-row .titulo {
       font-family: 'Maven Pro', sans-serif;
       font-weight: 700;
-      letter-spacing: -1px;
-      text-transform: lowercase; }
+      letter-spacing: -1px; }
   .front .principal .view-eventos-home {
     margin: 100px 0; }
   .front .principal .view-banner-home {
@@ -241,7 +239,6 @@ header {
     font-size: 24px;
     font-family: 'Maven Pro', sans-serif;
     font-weight: 700;
-    text-transform: lowercase;
     letter-spacing: -1px; }
     .page-noticias .principal .view-noticias-todas-16 .views-row .titulo a {
       color: #222; }
@@ -269,8 +266,7 @@ header {
     font-family: 'Maven Pro', sans-serif;
     font-weight: 700;
     letter-spacing: -1px;
-    font-size: 52px;
-    text-transform: lowercase; }
+    font-size: 52px; }
   .node-type-article .principal .view-topo-noticia-16 .views-field-field-chamada {
     padding: 10px 0;
     font-size: 28px;
@@ -322,30 +318,133 @@ header {
     padding-right: 5px;
     padding-left: 5px; }
     .page-artistas .principal .lista-artistas .view-artistas .views-row .views-field-field-image {
-      overflow: hidden; }
+      overflow: hidden;
+      background: #000; }
       .page-artistas .principal .lista-artistas .view-artistas .views-row .views-field-field-image img {
-        transition: .3s all; }
-    .page-artistas .principal .lista-artistas .view-artistas .views-row .views-field-title a {
+        transition: .3s all;
+        opacity: .8; }
+    .page-artistas .principal .lista-artistas .view-artistas .views-row .info-artista .nome a {
       display: block;
-      height: 100%;
-      width: 97%;
       position: absolute;
-      top: 0;
+      top: 40%;
+      width: 96%;
       color: #fff;
       text-align: center;
+      font-size: 24px;
       font-family: 'Maven Pro', sans-serif;
       font-weight: 700;
-      padding: 40% 0;
-      font-size: 24px;
+      transition: all .3s; }
+    .page-artistas .principal .lista-artistas .view-artistas .views-row .info-artista .links {
+      text-align: center;
+      width: 96%;
+      position: absolute;
+      bottom: 0;
       opacity: 0;
-      transition: .3s all;
-      background-image: linear-gradient(to top, black, transparent); }
-  .page-artistas .principal .lista-artistas .view-artistas .views-row:hover .views-field-title a {
-    opacity: 1; }
+      transition: all .3s; }
+      .page-artistas .principal .lista-artistas .view-artistas .views-row .info-artista .links a {
+        display: inline-block;
+        width: 25px;
+        height: 30px;
+        margin: 5px;
+        text-indent: -5000em; }
+      .page-artistas .principal .lista-artistas .view-artistas .views-row .info-artista .links a.facebook {
+        background: transparent url(../img/icones-artista-w.png) 0 0 no-repeat; }
+      .page-artistas .principal .lista-artistas .view-artistas .views-row .info-artista .links a.soundcloud {
+        background: transparent url(../img/icones-artista-w.png) 0 -53px no-repeat; }
+      .page-artistas .principal .lista-artistas .view-artistas .views-row .info-artista .links a.beatport {
+        background: transparent url(../img/icones-artista-w.png) 0 -107px no-repeat; }
+      .page-artistas .principal .lista-artistas .view-artistas .views-row .info-artista .links a.instagram {
+        background: transparent url(../img/icones-artista-w.png) 0 -161px no-repeat; }
+      .page-artistas .principal .lista-artistas .view-artistas .views-row .info-artista .links a.youtube {
+        background: transparent url(../img/icones-artista-w.png) 0 -213px no-repeat; }
+      .page-artistas .principal .lista-artistas .view-artistas .views-row .info-artista .links a.presskit {
+        background: transparent url(../img/icones-artista-w.png) 1px -266px no-repeat; }
+  .page-artistas .principal .lista-artistas .view-artistas .views-row:hover .nome a {
+    font-size: 32px; }
   .page-artistas .principal .lista-artistas .view-artistas .views-row:hover img {
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); }
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    opacity: 0.2; }
+  .page-artistas .principal .lista-artistas .view-artistas .views-row:hover .links {
+    bottom: 30%;
+    opacity: 1; }
+
+/*--- PAGINA DE UM ARTISTA ----------------------------*/
+.node-type-artista .principal .view-capa-artista {
+  float: left;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #111;
+  height: 500px; }
+  .node-type-artista .principal .view-capa-artista img {
+    display: none; }
+.node-type-artista .principal .view-topo-artista {
+  margin-top: -100px;
+  background: #fff;
+  padding: 10px 35px;
+  margin-left: -35px;
+  margin-right: -35px; }
+  .node-type-artista .principal .view-topo-artista h1 {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-size: 52px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 15px; }
+.node-type-artista .principal .views-field-body p, .node-type-artista .principal .views-field-body ul, .node-type-artista .principal .views-field-body ol {
+  font-family: 'Open Sans',serif;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 24px;
+  color: #525252; }
+.node-type-artista .principal .views-field-body h3, .node-type-artista .principal .views-field-body .p3 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px; }
+.node-type-artista .principal .contatos {
+  margin: 40px 0 0 40px; }
+  .node-type-artista .principal .contatos h3 {
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 42px;
+    letter-spacing: -1px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 30px; }
+  .node-type-artista .principal .contatos .view-contatos-artista {
+    width: 100%; }
+    .node-type-artista .principal .contatos .view-contatos-artista .views-field {
+      width: 100%;
+      margin-bottom: 15px; }
+      .node-type-artista .principal .contatos .view-contatos-artista .views-field a {
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 2px solid #333;
+        padding: 0 0 15px 45px;
+        display: inline-block;
+        width: 100%; }
+        .node-type-artista .principal .contatos .view-contatos-artista .views-field a:hover {
+          color: #666; }
+  .node-type-artista .principal .contatos .views-field-field-facebook a {
+    background: transparent url(../img/icones-artista.png) 0 0 no-repeat; }
+  .node-type-artista .principal .contatos .views-field-field-soundcloud a {
+    background: transparent url(../img/icones-artista.png) 0 -53px no-repeat; }
+  .node-type-artista .principal .contatos .views-field-field-beatport a {
+    background: transparent url(../img/icones-artista.png) 0 -107px no-repeat; }
+  .node-type-artista .principal .contatos .views-field-field-instagram a {
+    background: transparent url(../img/icones-artista.png) 0 -161px no-repeat; }
+  .node-type-artista .principal .contatos .views-field-field-youtube a {
+    background: transparent url(../img/icones-artista.png) 0 -213px no-repeat; }
+  .node-type-artista .principal .contatos .views-field-field-presskit a {
+    background: transparent url(../img/icones-artista.png) 1px -266px no-repeat; }
 
 /*--- RODAPE ------------------------------------------*/
 footer {
