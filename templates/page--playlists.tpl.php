@@ -8,9 +8,7 @@
 
 	<div class="container">
 
-		<h1>Eventos</h1>
-
-		<a href="http://detroitbr.org/eventos/todos" class="todos">Ver Todos</a>
+		<h1>Playlists</h1>
 				
 			<?php if ($messages): ?>
 	          <div id="messages"><div class="section clearfix">
@@ -24,7 +22,7 @@
 			
 			<div class="col-sm-12"> 
 
-				 <?php print views_embed_view('eventos', 'default'); ?>
+				 <?php print views_embed_view('playlists', 'default'); ?>
 				
 	        </div> 
 

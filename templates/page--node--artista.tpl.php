@@ -26,6 +26,16 @@
 	        	<div class="contatos">
 		        	<h3>Veja Mais</h3>
 		        	<?php print views_embed_view('contatos_artista', 'default'); ?>
+
+		        	<div class="eventos">
+		        	<h3>Próximos Eventos</h3>
+		        	<?php print views_embed_view('eventos_artista', 'default'); ?>	
+		        	</div>
+
+		        	<div class="veja-mais">
+		        		<a href="http://detroitbr.org/eventos/<?php print $node->nid;?>">Veja Mais</a>
+		        	</div>
+
 	        	</div>
 	        </div> 
 		</div>

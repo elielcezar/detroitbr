@@ -27,9 +27,6 @@
 
 				<?php print views_embed_view('corpo_noticia_16', 'default'); ?>
 
-				 <?php render($page['content']['metatags']); ?>
- 
-
 				
 	        </div> 
 	        <div class="col-sm-4">

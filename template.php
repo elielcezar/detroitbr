@@ -13,6 +13,8 @@ function detroitbr2016_preprocess_page(&$variables) {
       drupal_add_js(array('nid' => $variables['node']->nid), 'setting'); 
   } 
 
+  
+
 }
 
 

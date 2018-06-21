@@ -12,18 +12,19 @@
 			<div class="block">
 				<h4>detroitbr</h4>
 				<ul>
-					<li><a href="#">sobre</a></li>
-					<li><a href="#">termos de uso</a></li>
-					<li><a href="#">entre em contato</a></li>
+					<li><a href="http://detroitbr.org/sobre">sobre</a></li>
+					
 				</ul>
 			</div>
 
 			<div class="block">
 				<h4>conteúdo</h4>
 				<ul>
-					<li><a href="#">notícias</a></li>
-					<li><a href="#">artistas</a></li>
-					<li><a href="#">música</a></li>
+					<li><a href="http://detroitbr.org/noticias">notícias</a></li>
+					<li><a href="http://detroitbr.org/artistas">artistas</a></li>
+					<li><a href="http://detroitbr.org/playlists">música</a></li>
+					<li><a href="http://detroitbr.org/eventos/todos">eventos</a></li>
+					
 				</ul>
 			</div>
 
@@ -39,4 +40,6 @@
 
 <!--/ CONTENT -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+
+
 

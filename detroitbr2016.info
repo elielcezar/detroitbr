@@ -13,6 +13,8 @@ base theme = bootstrap
 
 stylesheets[all][] = css/geral.css
 
+scripts[] = js/geral.js
+
 project = "drupal"
 datestamp = "1328134560"
 

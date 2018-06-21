@@ -1,43 +1,41 @@
+
 $preto: #222;
+
+
 body{
 	font-family: 'Open Sans',serif;
+	font-size: 14px;
 }
 a{
 	color: $preto;
+
+	&:hover{color: #666;}
 }
+
+img.img-responsive{
+	height: auto;
+}
+
 @media (min-width: 1200px){
 	.container {
 	    width: 80%;
 	}
 }
-header{
-	width: 100%;
+
+button,
+.btn-info{
 	background: $preto;
-	color: #fff;
+	border: none;
+}
+
+
+.principal{
 	float: left;
-	.logo{
-		background: #000;
-		padding: 24px 5%;
-		float: left;
-		height: 70px;
-	}	
-	li {
-		width: auto;
-		float: left;
-		display: inline-block;		
-		text-align: center;
-		font-size: 18px;
-		a {
-			display: block;
-			padding: 24px  20px 20px 20px !important;
-			color: #fff;	
-			font-family: 'Maven Pro', sans-serif; 
-		}
-		a:hover {
-			background: #222;
-		}
-	}
-} 
+	width: 100%;
+
+	img.img-responsive{margin: auto !important;}
+}
+
 /* paginacao */
 .pagination > li:first-child > span,
 .pagination > li:last-child > a, 
@@ -60,6 +58,199 @@ header{
 .pagination > li > span {
     color: $preto;
 }
+
+/*--- WIDGETS --------------*/
+
+/* eventos */
+.eventos{
+	margin-bottom: 50px;
+
+	.nav-tabs{
+		border-bottom: 2px solid $preto;
+		margin-bottom: 15px;
+		h4{
+			float: left;
+			background: $preto;
+			color: #fff;
+			padding: 5px 15px;
+			margin: 0;
+			padding: 11px 20px;
+		}
+		li{float: right;}
+		li a{padding: 6px 15px;}
+		li.active>a, 
+		li.active>a:focus, 
+		li.active>a:hover {
+		   border: none;
+		   border-radius: 0;
+		}
+		li.active a{
+			color: #fff;
+			background: $preto;
+		}
+	}
+
+	.views-row{
+		margin-bottom: 25px;
+		padding-bottom: 25px;
+		border-bottom: 1px solid #e5e5e5;
+
+		a{font-weight: bold;}
+
+		span.views-label{
+			float: left;
+			margin-right: 5px;
+		}
+
+		.views-field-field-data{
+			font-size: 15px;
+			//font-weight: 700;
+			margin-bottom: 10px;
+		}
+		.views-field-title{
+			font-size: 24px;
+			margin: 10px 0;
+
+			a{font-weight: normal;}
+		}
+	}
+}
+
+
+/*--- HEADER ------------------------------------------------*/
+
+header{
+	width: 100%;
+	background: $preto;
+	color: #fff;
+	float: left;
+	.logo{
+		background: #000;
+		padding: 24px 5%;
+		float: left;
+		height: 70px;
+	}	
+	
+	#nav-icon{display: none;}
+
+	li {
+		width: auto;
+		float: left;
+		display: inline-block;		
+		text-align: center;
+		font-size: 18px;
+		a {
+			display: block;
+			padding: 24px  20px 20px 20px !important;
+			color: #fff;	
+			font-family: 'Maven Pro', sans-serif; 
+		}
+		a:hover {
+			background: #222;
+		}
+	}
+} 
+
+@media(max-width: 767px){
+	header{
+		margin-bottom: 0;
+
+		#nav-icon{
+			display: block;
+			float: right;
+
+			width: 40px;
+			height: 30px;
+			position: relative;
+			margin: 25px 25px 0 0;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: .1s ease-in-out;
+			-moz-transition: .1s ease-in-out;
+			-o-transition: .1s ease-in-out;
+			transition: .1s ease-in-out;
+			cursor: pointer;
+
+			span{
+				display: block;
+				position: absolute;
+				height: 5px;
+				width: 100%;
+				background: #fff;
+				border-radius: 9px;
+				opacity: 1;
+				left: 0;
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				transform: rotate(0deg);
+				-webkit-transition: .1s ease-in-out;
+				-moz-transition: .1s ease-in-out;
+				-o-transition: .1s ease-in-out;
+				transition: .1s ease-in-out;
+			}
+		}
+		#nav-icon span:nth-child(1) {
+		  top: 0px;
+		}
+		#nav-icon span:nth-child(2),
+		#nav-icon span:nth-child(3) {
+		  top: 10px;
+		}
+		#nav-icon span:nth-child(4) {
+		  top: 20px;
+		}
+		#nav-icon.open span:nth-child(1) {
+		  top: 18px;
+		  width: 0%;
+		  left: 50%;
+		}
+		#nav-icon.open span:nth-child(2) {
+		  -webkit-transform: rotate(45deg);
+		  -moz-transform: rotate(45deg);
+		  -o-transform: rotate(45deg);
+		  transform: rotate(45deg);
+		}
+		#nav-icon.open span:nth-child(3) {
+		  -webkit-transform: rotate(-45deg);
+		  -moz-transform: rotate(-45deg);
+		  -o-transform: rotate(-45deg);
+		  transform: rotate(-45deg);
+		}
+		#nav-icon.open span:nth-child(4) {
+		  top: 18px;
+		  width: 0%;
+		  left: 50%;
+		}
+		.menu.nav{
+			overflow: hidden;
+			width: 1px;
+			height: 1px;
+			opacity: 0;
+			transition: all .3s;
+		}
+		.menu.nav.open{
+			opacity: 1;
+			width: 100%;
+		    position: absolute;
+		    right: 0;
+		    top: 69px;
+		    height: auto;
+		    border: 1px solid #777;
+		    background: #222;
+		    z-index: 15;
+		    transition: all .3s;
+
+		    li{
+		    	width: 100%;
+		    }
+		}
+	}
+}
+
+
 /*--- HOME ------------------------------------------------*/
 .front{
 	.destaque{
@@ -108,15 +299,10 @@ header{
 				}
 				.chamada{
 					font-size: 21px;
-					font-weight: 600;
+					font-weight: 300;
 					text-shadow: 2px 2px #000;
 				}
-			}	
-			/*.titulo{
-				font-size: 40px;
-				font-family: 'Maven Pro', sans-serif; 
-				font-weight: 700;
-			}*/
+			}				
 		}
 		.view-destaque-b,
 		.view-destaque-c,
@@ -137,7 +323,7 @@ header{
 				}		
 				.titulo{
 					color: #fff;					
-					font-size: 24px;
+					font-size: 20px;
 					font-family: 'Maven Pro', sans-serif; 
 					font-weight: 700;
 					letter-spacing: -1px;
@@ -149,9 +335,72 @@ header{
 	.principal{
 		float: left;
 		width: 100%;
-		.nav-tabs{
-			border-bottom: 2px solid $preto;
-			margin-bottom: 15px;
+
+		/* ultimas noticias */
+		.ultimas-noticias{
+			margin-bottom: 50px;
+
+			.nav-tabs{
+				border-bottom: 2px solid $preto;
+				margin-bottom: 15px;
+				h4{
+					float: left;
+					background: $preto;
+					color: #fff;
+					padding: 5px 15px;
+					margin: 0;
+					padding: 11px 20px;
+				}
+				li{float: right;}
+				li a{padding: 6px 15px;}
+				li.active>a, 
+				li.active>a:focus, 
+				li.active>a:hover {
+				   border: none;
+				   border-radius: 0;
+				}
+				li.active a{
+					color: #fff;
+					background: $preto;
+				}
+			}
+			.view-noticias-home-a{
+				.views-field-title{
+					font-size: 21px;
+					margin: 10px 0;
+					font-family: 'Maven Pro', sans-serif; 
+					font-weight: 700;
+					letter-spacing: -1px;				
+				}
+			}
+			.view-noticias-home-b{
+				.views-row{
+					float: left;
+					width: 100%;
+					padding: 5px;
+					margin-bottom: 5px;
+					a{font-weight: bold;}
+					.field-content .col-sm-4,
+					.field-content .col-sm-8{
+						padding-right: 10px;
+						padding-left: 10px;
+					}
+					.titulo{
+						font-family: 'Maven Pro', sans-serif; 
+						font-weight: 700;
+						letter-spacing: -1px;					
+					}
+				}
+			}
+		}
+		
+
+		/* instagram */
+		.instagram{
+			margin-bottom: 50px;
+			position: relative;
+			float: left;
+
 			h4{
 				float: left;
 				background: $preto;
@@ -160,65 +409,102 @@ header{
 				margin: 0;
 				padding: 11px 20px;
 			}
-			li{float: right;}
-			li a{padding: 6px 15px;}
-			li.active>a, 
-			li.active>a:focus, 
-			li.active>a:hover {
-			   border: none;
-			   border-radius: 0;
+			a.instagram{
+				position: absolute;
+			    right: 3%;
+			    display: block;
+			    border: 2px solid #222;
+			    width: 35px;
+			    height: 35px;
+			    border-radius: 50%;
+			    text-indent: -5000em;
+			    background: #fff url(../img/instagram-icon-home.png) 6px 6px no-repeat;
+
+			    &:hover{background: #222 url(../img/instagram-icon-home.png) 6px -34px no-repeat;}
 			}
-			li.active a{
-				color: #fff;
-				background: $preto;
-			}
-		}
-		.view-noticias-home-a{
-			.views-field-title{
-				font-size: 21px;
-				margin: 10px 0;
-				font-family: 'Maven Pro', sans-serif; 
-				font-weight: 700;
-				letter-spacing: -1px;				
+			iframe{
+			    padding-top: 15px;				  
+			    border-top: 2px solid $preto !important;
 			}
 		}
-		.view-noticias-home-b{
-			.views-row{
+
+		/* podcast */
+		.podcast{
+			margin-bottom: 50px;
+
+			h4{
 				float: left;
-				width: 100%;
-				padding: 5px;
-				margin-bottom: 5px;
-				a{font-weight: bold;}
-				.field-content .col-sm-4,
-				.field-content .col-sm-8{
-					padding-right: 10px;
-					padding-left: 10px;
-				}
-				.titulo{
-					font-family: 'Maven Pro', sans-serif; 
-					font-weight: 700;
-					letter-spacing: -1px;					
-				}
+				background: $preto;
+				color: #fff;
+				padding: 5px 15px;
+				margin: 0;
+				padding: 11px 20px;
+			}
+			a.soundcloud{
+				position: absolute;
+			    right: 2%;
+			    display: block;
+			    border: 2px solid #222;
+			    width: 35px;
+			    height: 35px;
+			    border-radius: 50%;
+			    text-indent: -5000em;
+			    background: #fff url(../img/soundcloud-icon-home.png) 4px 9px no-repeat;
+
+			    &:hover{background: #222 url(../img/soundcloud-icon-home.png) 4px -25px no-repeat;}
+			}
+			iframe{
+			    padding-top: 15px;				  
+			    border-top: 2px solid $preto;
 			}
 		}
-		.view-eventos-home{
-			margin: 100px 0;
+
+		/* podcast */
+		.playlists{
+			margin-bottom: 50px;
+
+			h4{
+				float: left;
+				background: $preto;
+				color: #fff;
+				padding: 5px 15px;
+				margin: 0;
+				padding: 11px 20px;
+			}
+			a.spotify{
+				position: absolute;
+			    right: 2%;
+			    display: block;
+			    border: 2px solid #222;
+			    width: 35px;
+			    height: 35px;
+			    border-radius: 50%;
+			    text-indent: -5000em;
+			    background: #fff url(../img/spotify-icon-home.png) 5px 6px no-repeat;
+
+			    &:hover{background: #222 url(../img/spotify-icon-home.png) 5px -34px no-repeat;}
+			}			
+			.list{
+			    padding-top: 15px;				  
+			    border-top: 2px solid $preto;
+			    width: 100%;
+			    float: left;
+			}
+			.views-field-title{
+				font-size: 24px;
+				margin: 10px 0;
+			}
 		}
-		.view-banner-home{
-			margin-top: 100px;
-			img{margin: auto;}
-		}
-		.soundcloud.instagram{
-			float: left;
-			width: 100%;
-			margin: 50px 0;
-		}
+
+
+		/* banner */
 		.banner-home{
 			text-align: center;
 			position: relative;
 			float: left;
 			width: 100%;
 			text-align: center;
+			margin-top: 50px;
 
 			.container-banner{
 				width: 100%;
@@ -254,18 +540,65 @@ header{
 	}
 	
 } 
+
+
+@media(max-width:767px){
+	.front{
+		.destaque{
+			line-height: 21px !important;
+			margin-bottom: 40px;
+			.titulo a{
+				font-size: 21px;
+				line-height: 28px !important;
+			}
+			.chamada{display: none;}
+		}
+		.view-destaque-a .conteudo-destaque .titulo{line-height: 21px !important;}
+
+		.ultimas-noticias{
+			.nav-tabs{
+				h4{
+					width: 100%;
+					margin-bottom: 10px !important;
+				}
+				li{width: 20%;}
+				li:nth-child(4){width: 40%;}
+			}
+		}
+	}
+}
+
 /*--- TODAS AS NOTICIAS --------------------------------*/
 .page-noticias{
 	
-	header{margin-bottom: 100px;}
+	//header{margin-bottom: 25px;}
+
 	.principal{
 		.container{
 			max-width: 1000px;
 		}
+		h1{
+			margin: 50px 0.5%;
+			border-bottom: 2px solid #222;
+			font-family: 'Maven Pro', sans-serif; 
+			font-weight: 700;
+			letter-spacing: -1px;
+			font-size: 52px;	
+		}
 		.view-noticias-todas-16{
+
+			#edit-uid-wrapper,
+			#edit-field-tags-tid-wrapper,
+			.views-exposed-widget{width: 200px;}
+
+			.views-submit-button{width: 120px;}
+
 			.views-row{
 				padding: 15px 0;
 				margin: 15px 0;
+
+				.col-lg-4{padding-left: 0;}
+
 				.titulo{
 					font-size: 24px;
 					font-family: 'Maven Pro', sans-serif; 
@@ -314,12 +647,6 @@ header{
 				letter-spacing: -1px;
 				color: #999;				
 			}
-			.views-field-sharethis{
-				border-top: 1px solid #999;
-				padding-top: 15px;
-				margin-top: 15px;
-				margin-bottom: 30px;
-			}
 			.views-field-created, 
 			.views-field-changed{
 				font-family: 'Open Sans',serif;
@@ -327,6 +654,30 @@ header{
 			    line-height: 28px;
 			    margin-bottom: 24px;
 			    color: #525252;
+			}
+			.views-field-nothing{
+				border-top: 1px solid #ddd;
+			    margin-top: 10px;
+			    padding-top: 10px;
+			    float: left;
+			    width: 100%;
+			    margin-bottom: 25px;
+			}
+			.autor{
+				float: left;
+
+			    .foto{
+			    	float: left;
+    				max-width: 40px;
+			    }
+			    .nome{
+    				float: left;
+    				padding: 10px;
+    				font-weight: bold;
+			    }
+			}
+			.share{
+				float: right;
 			}
 			.twitter{
 				float: left;
@@ -351,6 +702,189 @@ header{
 				letter-spacing: -1px;
 			}
 		}
+
+		/* comentarios FB */
+		.fb-comments{
+			width: 100%;
+			span{
+				width: 100% !important;
+				iframe{
+					width: 100% !important;
+				}
+			}
+		}
+	}
+
+	.sidebar{
+		padding: 50px 0 0 50px;
+
+		.view-noticias-relacionadas{
+			.views-row{margin-bottom: 50px;}
+			.views-field-title{
+				font-size: 18px;
+				margin: 10px 0;
+				font-family: 'Maven Pro', sans-serif; 
+			}
+		}
+		.eventos{
+			margin: 50px 0;
+			float: left;
+			width: 100%;
+		}
+	}
+	
+}
+
+@media(max-width:767px){
+	.node-type-article{
+		.principal{
+			.capa{display: none;}
+			.view-topo-noticia-16{
+				margin-top: 0;
+				padding: 0;
+			    max-width: 100%;
+			    width: 100%;
+			    margin: 0;		
+
+				h1{font-size: 42px;}	
+				.views-field-field-chamada{
+					font-size: 21px;
+					line-height: 28px;
+					letter-spacing: 0;
+				}
+			}
+			.views-field-body{
+				img{height: auto !important;}
+			}
+			.sidebar{display: none;}
+		}
+		
+	}
+
+}
+/*--- PAGINA DE UMA PLAYLIST ----------------------------*/
+.node-type-playlist{
+	.principal{
+		.view-capa-noticia{
+			float: left;
+			width: 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			height: 500px;
+			img{display: none;}
+		}
+		.view-topo-noticia-16{
+			margin-top: -100px;
+			background: #fff;
+			padding: 10px 35px;
+			margin-left: -35px;
+			margin-right: -35px;
+			h1{
+				font-family: 'Maven Pro', sans-serif; 
+				font-weight: 700;
+				letter-spacing: -1px;
+				font-size: 52px;				
+			}
+			
+			.views-field-field-chamada{
+				padding: 10px 0;
+				font-size: 28px;
+				line-height: 32px;
+				letter-spacing: -1px;
+				color: #999;				
+			}
+
+			/*.views-field-sharethis{
+				border-top: 1px solid #999;
+				padding-top: 15px;
+				margin-top: 15px;
+				margin-bottom: 30px;
+			}*/
+			.views-field-created, 
+			.views-field-changed{
+				font-family: 'Open Sans',serif;
+			    font-size: 16px;
+			    line-height: 28px;
+			    margin-bottom: 24px;
+			    color: #525252;
+			}
+			.views-field-nothing{
+				border-top: 1px solid #ddd;
+			    margin-top: 10px;
+			    padding-top: 10px;
+			    float: left;
+			    width: 100%;
+			    margin-bottom: 25px;
+			}
+			.autor{
+				float: left;
+
+			    .foto{
+			    	float: left;
+    				max-width: 40px;
+			    }
+			    .nome{
+    				float: left;
+    				padding: 10px;
+    				font-weight: bold;
+			    }
+			}
+			.share{
+				float: right;
+			}
+			.twitter{
+				float: left;
+				margin-right: 25px;
+			}
+		}
+		.views-field-body{
+			p, ul, ol {
+			    font-family: 'Open Sans',serif;
+			    font-size: 16px;
+			    line-height: 28px;
+			    margin-bottom: 24px;
+			    color: #525252;
+			}
+			h3, .p3{
+				font-weight: bold;
+				font-size: 34px;
+				line-height: 42px;
+				letter-spacing: -1px;
+				font-family: 'Maven Pro', sans-serif;
+				font-weight: 700;
+				letter-spacing: -1px;
+			}
+		}
+
+		/* comentarios FB */
+		.fb-comments{
+			width: 100%;
+			span{
+				width: 100% !important;
+				iframe{
+					width: 100% !important;
+				}
+			}
+		}
+	}
+
+	.sidebar{
+		padding: 50px 0 0 50px;
+
+		.view-noticias-relacionadas{
+			.views-row{margin-bottom: 50px;}
+			.views-field-title{
+				font-size: 18px;
+				margin: 10px 0;
+				font-family: 'Maven Pro', sans-serif; 
+			}
+		}
+		.eventos{
+			margin: 50px 0;
+			float: left;
+			width: 100%;
+		}
 	}
 	
 }
@@ -359,7 +893,14 @@ header{
 	.principal{
 		float: left;
 		width: 100%;
-		h1{margin: 50px 0;}
+		h1{
+			margin: 50px 0.5%;
+			border-bottom: 2px solid #222;
+			font-family: 'Maven Pro', sans-serif; 
+			font-weight: 700;
+			letter-spacing: -1px;
+			font-size: 52px;	
+		}
 
 		.container{
 			width: 92%;
@@ -409,6 +950,7 @@ header{
 								height: 30px;
 								margin: 5px;
 								text-indent: -5000em;
+								text-decoration: none !important;
 							}
 							a.facebook{background: transparent url(../img/icones-artista-w.png) 0 0 no-repeat;}
 							a.soundcloud{background: transparent url(../img/icones-artista-w.png) 0 -53px no-repeat;}
@@ -422,7 +964,10 @@ header{
 				}
 				//.views-row:hover .views-field-title a{opacity: 1;}
 				.views-row:hover{
-					.nome a{font-size: 32px;}
+					.nome a{
+						font-size: 28px;
+						text-decoration: none !important;
+					}
 					img{
 			            -moz-transform: scale(2);
 			            -webkit-transform: scale(2);
@@ -490,6 +1035,8 @@ header{
 				font-weight: 700;
 				letter-spacing: -1px;
 			}
+
+			a{font-weight: bold;}
 		}
 		.contatos{
 			margin: 40px 0 0 40px;			
@@ -512,7 +1059,7 @@ header{
 					a{						
 						font-size: 16px;
 						font-weight: bold;
-						border-bottom: 2px solid #333;
+						border-bottom: 1px solid #ccc;
 						padding: 0 0 15px 45px;
 						display: inline-block;
 						width: 100%;
@@ -528,11 +1075,299 @@ header{
 			.views-field-field-youtube a{background: transparent url(../img/icones-artista.png) 0 -213px no-repeat;}
 			.views-field-field-presskit a{background: transparent url(../img/icones-artista.png) 1px -266px no-repeat;}
 		}
+
+		.veja-mais{
+			a{
+				display: inline-block;
+				padding: 15px;
+				color: #fff;
+				background: $preto;
+				text-align: center;
+				width: 100%;
+			}
+		}
 		
 	}
 	
 }
 
+/*--- EVENTOS -------------------------------------------------------------------------*/
+
+.page-eventos{
+	.principal{
+
+		.container{position: relative;}
+
+		h1{
+			margin: 50px 0.5%;
+			border-bottom: 2px solid #222;
+			font-family: 'Maven Pro', sans-serif; 
+			font-weight: 700;
+			letter-spacing: -1px;
+			font-size: 52px;	
+		}
+		a.todos{
+			display: block;
+			float: right;
+			background: $preto;
+			color: #fff;
+			padding: 7px 15px;
+			position: absolute;
+			top: 65px;
+			right: 22px;
+		}
+		.view-eventos{
+			.view-filters{
+				padding: 15px;
+				margin-bottom: 40px;
+
+				.views-exposed-widget{
+					width: 19%;			
+					margin-right: 1%;
+				}
+				#edit-field-data-value-1-wrapper{
+					width: 32%;
+
+					label[for="edit-field-data-value-1"]{display: none;}
+
+					#edit-field-data-value-min-wrapper,
+					#edit-field-data-value-max-wrapper{
+						width: 45%;
+						margin-right: 5%;
+						float: left;
+					}
+				}
+				.views-submit-button{width: 6%;}
+			}		
+		}
+
+		.views-row{
+			/*margin-bottom: 25px;
+			padding-bottom: 25px;*/
+			min-height: 325px;
+			//border-bottom: 1px solid #e5e5e5;
+
+			a{font-weight: bold;}
+
+			span.views-label{
+				float: left;
+				margin-right: 5px;
+			}
+
+			.views-field-field-data{
+				font-size: 15px;
+				//font-weight: 700;
+				margin-bottom: 10px;
+			}
+			.views-field-title{
+				font-size: 24px;
+				margin: 10px 0;
+
+				a{font-weight: normal;}
+			}
+		}
+	}
+	
+}
+
+/*--- PAGINA DE UM EVENTO INDIVIDUAL --------------------------------------------------*/
+
+.node-type-evento{
+	.principal{
+		.view-capa-evento{
+			float: left;
+			width: 100%;
+			background-position: center center;
+			//background-repeat: no-repeat;
+			//background-size: 100% auto;
+			background-color: #111;
+			height: 500px;
+			img{display: none;}
+		}
+		.view-topo-evento{
+			margin-top: -100px;
+			background: #fff;
+			padding: 10px 35px;
+			margin-left: -35px;
+			margin-right: -35px;			
+
+			h1{
+				font-family: 'Maven Pro', sans-serif; 
+				font-weight: 700;
+				letter-spacing: -1px;
+				font-size: 52px;
+				border-bottom: 2px solid #333;
+				padding-bottom: 15px;				
+			}			
+			
+		}
+		.view-evento-info{
+
+			font-size: 16px;
+
+			a{font-weight: bold;}
+
+			.views-field-field-data{
+				font-size: 24px;
+				margin-bottom: 15px;
+			}
+			.views-field-nothing{
+				margin-bottom: 15px;
+			}
+			.views-field-field-local{
+				margin-bottom: 15px;
+				span.views-label{
+					float: left;
+					margin-right: 10px;
+				}	
+			}
+			a.facebook{
+				display: inline-block;
+				padding: 10px;
+				font-weight: normal;
+				text-transform: uppercase;
+				color: #fff;
+				background: #3b5998;
+				margin-bottom: 15px;
+				font-size: 13px;
+    			letter-spacing: 1px;
+			}
+
+			.views-field-body{
+				p, ul, ol {
+				    font-family: 'Open Sans',serif;
+				    font-size: 16px;
+				    line-height: 28px;
+				    margin-bottom: 24px;
+				    color: #525252;
+				}
+				h3, .p3{
+					font-weight: bold;
+					font-size: 34px;
+					line-height: 42px;
+					letter-spacing: -1px;
+					font-family: 'Maven Pro', sans-serif;
+					font-weight: 700;
+					letter-spacing: -1px;
+				}
+
+				a{font-weight: bold;}
+			}
+		}
+		
+
+		.sidebar{
+			margin: 40px 0 0 40px;
+		}
+		
+	}
+	
+}
+
+/*--- PLAYLISTS --------------------------------*/
+.page-playlists{
+	
+	//header{margin-bottom: 25px;}
+
+	.principal{
+		.container{
+			max-width: 1000px;
+		}
+		h1{
+			margin: 50px 0.5%;
+			border-bottom: 2px solid #222;
+			font-family: 'Maven Pro', sans-serif; 
+			font-weight: 700;
+			letter-spacing: -1px;
+			font-size: 52px;	
+		}
+		.view-playlists{
+			.views-row{
+				padding: 15px 0;
+				margin: 15px 0;
+				.views-field-title{
+					font-size: 24px;
+					font-family: 'Maven Pro', sans-serif; 
+					font-weight: 700;					
+					letter-spacing: -1px;
+					a{color: $preto;}
+				}				
+			}
+		}
+	}
+	
+}
+
+/*--- PAGINA DE UM USUARIO ------------------------------------------*/
+
+.page-user{
+	.principal{
+		padding: 50px 0;
+
+		.view-usuario-info{
+			.views-field-name{
+				font-size: 36px;
+				font-family: 'Maven Pro', sans-serif; 
+				font-weight: 700;					
+				letter-spacing: -1px;
+				margin: 15px 0;
+			}
+			.views-field-field-sobre{
+				margin-bottom: 25px;
+			}
+			.views-field-field-facebook a{
+				display: block;
+				width: 100%;
+				padding: 10px;
+				text-align: center;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: #fff;
+				background: #3b5998;
+			}
+		}
+
+		.view-noticias-autor{
+
+			#edit-uid-wrapper,
+			#edit-field-tags-tid-wrapper,
+			.views-exposed-widget{width: 200px;}
+
+			.views-submit-button{width: 120px;}
+
+			.views-row{
+				padding: 0 0 15px 0;
+				margin: 0 0 15px 0;
+
+				.col-lg-4{padding-left: 0;}
+
+				.titulo{
+					font-size: 24px;
+					font-family: 'Maven Pro', sans-serif; 
+					font-weight: 700;					
+					letter-spacing: -1px;
+					a{color: $preto;}
+				}
+				.chamada{
+					font-size: 18px;
+					color: #999;
+				}
+			}
+		}
+	}
+}
+
+/*--- LOCAL -------------------------------------------*/
+
+.node-type-local{
+	.principal{
+		padding: 50px 0;
+
+		.conteudo{
+			.field{margin: 10px 0;}
+		}
+	}
+}
 
 /*--- RODAPE ------------------------------------------*/
 footer{
@@ -562,5 +1397,24 @@ footer{
 			width: 25%;
 		}
 		.block.facebook{width: 40%;}
+	}
+}
+
+@media(max-width:767px){
+	footer{
+		.logo,
+		.more-info{
+			width: 100%;
+
+			.block{
+				width: 50%;
+				text-align: center;
+			}
+			.block.facebook{
+				width: 100%;
+				margin-top: 40px;
+			}
+		}
+		.logo{border: none;}
 	}
 }
